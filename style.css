@@ -1,0 +1,155 @@
+
+/* Main application background */
+.stApp {
+    background: linear-gradient(
+        135deg,
+        #f5f3ff 0%,
+        #eef2ff 50%,
+        #f8fafc 100%
+    );
+    color: #1e1b4b;
+}
+
+/* Main content */
+.block-container {
+    max-width: 1150px;
+    padding-top: 2.5rem;
+    padding-bottom: 3rem;
+}
+
+/* Sidebar */
+section[data-testid="stSidebar"] {
+    background: #ffffff;
+    border-right: 1px solid #e5e7eb;
+}
+
+/* Main heading */
+.hero h1 {
+    color: #1e1b4b;
+}
+
+.hero h1 span {
+    color: #7c3aed;
+}
+
+.hero > p {
+    color: #64748b;
+}
+
+/* Welcome card */
+.welcome-card {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #e9e5f5;
+    box-shadow: 0 10px 35px rgba(76, 29, 149, 0.06);
+}
+
+.welcome-card h2 {
+    color: #312e81;
+}
+
+.welcome-card > p {
+    color: #64748b;
+}
+
+/* Feature cards */
+.feature-card {
+    background: #ffffff;
+    border: 1px solid #e9e5f5;
+}
+
+.feature-card strong {
+    color: #312e81;
+}
+
+.feature-card p {
+    color: #64748b;
+}
+
+/* Transcript information */
+.document-banner {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+}
+
+.document-banner strong {
+    color: #312e81;
+}
+
+.document-banner p {
+    color: #64748b;
+}
+
+/* Chat messages */
+.stChatMessage {
+    background: #1e1b4b;
+    border: 1px solid #1e1b4b;
+    border-radius: 17px;
+}
+
+/* Chat input */
+.stChatInput textarea {
+    background: #1e1b4b;
+    color: #ffffff;
+    border: 1px solid #1e1b4b;
+}
+
+/* Buttons */
+.stButton > button {
+    background: #ffffff;
+    color: #5b21b6;
+    border: 1px solid #ddd6fe;
+    border-radius: 11px;
+}
+
+.stButton > button:hover {
+    background: #ede9fe;
+    color: #4c1d95;
+    border-color: #8b5cf6;
+}
+
+/* ---------- File uploader: Mint Theme Fix ---------- */
+
+[data-testid="stFileUploader"] {
+    padding: 16px;
+    border: 2px dashed #6ee7b7;
+    border-radius: 16px;
+    background: #ffffff !important;
+}
+
+/* Uploader drop area */
+[data-testid="stFileUploader"] section,
+[data-testid="stFileUploader"] [data-testid="stFileUploaderDropzone"] {
+    background: #f0fdf9 !important;
+    border: 1px dashed #99f6e4 !important;
+    border-radius: 12px;
+}
+
+/* Upload button */
+[data-testid="stFileUploader"] button {
+    background: #0f766e !important;
+    color: #ffffff !important;
+    border: 1px solid #0f766e !important;
+    border-radius: 9px !important;
+}
+
+[data-testid="stFileUploader"] button:hover {
+    background: #115e59 !important;
+    color: #ffffff !important;
+}
+
+/* Uploader instructions and file limits */
+[data-testid="stFileUploader"] p,
+[data-testid="stFileUploader"] small,
+[data-testid="stFileUploader"] span {
+    color: #334155 !important;
+}
+
+/* Uploaded filename */
+[data-testid="stFileUploader"] [data-testid="stFileName"] {
+    color: #134e4a !important;
+}
+
+/* File uploader icon */
+[data-testid="stFileUploader"] svg {
+    color: #0f766e;
+}
