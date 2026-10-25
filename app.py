@@ -40,52 +40,6 @@ for key, value in defaults.items():
     if key not in st.session_state:
         st.session_state[key] = value
 
-
-# -------------------- SIDEBAR --------------------
-
-with st.sidebar:
-    st.markdown(
-        """
-        <div class="sidebar-brand">
-            <div class="brand-icon">🎬</div>
-            <div>
-                <h2>Transcript AI</h2>
-                <p>Ask your video anything</p>
-            </div>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
-
-    st.markdown("---")
-    st.markdown("### 📚 How it works")
-    st.caption(
-        "Upload a YouTube transcript, then ask questions "
-        "about its content."
-    )
-
-    if st.session_state.file_name:
-        st.markdown("### 📄 Active transcript")
-        st.caption(st.session_state.file_name)
-        st.caption(f"{st.session_state.chunk_count} chunks indexed")
-
-    st.markdown("---")
-
-    if st.button("🗑️ Clear conversation", use_container_width=True):
-        st.session_state.messages = []
-        st.session_state.pending_question = None
-        st.rerun()
-
-    st.markdown(
-        """
-        <div class="sidebar-footer">
-            Built with Streamlit, LangChain, OpenAI and FAISS
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
-
-
 # -------------------- MAIN HEADER --------------------
 
 st.markdown(
@@ -242,3 +196,9 @@ else:
 
                 except Exception as exc:
                     st.error(f"Could not generate an answer: {exc}")
+# -------------------- CLEAR CONVERSATION --------------------
+
+if st.button("🗑️ Clear conversation", key="clear_chat"):
+    st.session_state.messages = []
+    st.session_state.pending_question = None
+    st.rerun()
